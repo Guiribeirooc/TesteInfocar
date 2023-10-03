@@ -8,7 +8,7 @@ IFileImportRepository repository = new FileImportRepository();
 IFileImportServices fileImportServices = new FileImportService(repository, fileService);
 
 Console.WriteLine("Iniciando processo de importação do arquivo.");
-var file = "C:\\Users\\guilh\\OneDrive\\Área de Trabalho\\teste-ti-processamento_fornecedor_fora_do_ar.xlsx";
+var file = "C:\\Users\\Public\\teste-ti-processamento_fornecedor_fora_do_ar.xlsx";
 
 fileImportServices.ImportFile(file);
 
