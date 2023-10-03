@@ -22,10 +22,10 @@ namespace FileImport.Services
 
             for (int linha = 0; linha < dados.Count; linha++)
             {
-                var placa = dados[linha]["PLACA_ANTIGA"].ToString().Trim();
-                var cmt = dados[linha]["CMT"].ToString().Trim();
-                var nrPassageiros = dados[linha]["NR_PASSAGEIROS"].ToString().Trim();
-                var busca = dados[linha]["BUSCA"].ToString().Trim();
+                var placa = dados[linha]["PLACA_ANTIGA"].ToString()?.Trim();
+                var cmt = dados[linha]["CMT"].ToString()?.Trim();
+                var nrPassageiros = dados[linha]["NR_PASSAGEIROS"].ToString()?.Trim();
+                var busca = dados[linha]["BUSCA"].ToString()?.Trim();
 
                 var supplyDto = new SupplyDTO()
                 {
@@ -37,8 +37,8 @@ namespace FileImport.Services
 
                 suppliers.Add(supplyDto);
             }
-            _repository.ImportData(suppliers);
 
+            _repository.ImportData(suppliers);
             return true;
         }
     }

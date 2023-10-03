@@ -27,7 +27,6 @@ namespace FileExport.Services
             }
 
             stream.Position = 0;
-
             return stream;
         }
     }
