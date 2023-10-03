@@ -6,7 +6,7 @@ namespace FileImport.Repositories
 {
     public class FileImportRepository : IFileImportRepository
     {
-        public void ImportData(List<SupplyDTO> supplyDto)
+        public void ImportData(List<SupplierDataDTO> supplierData)
         {
             SqlConnection connection = Connection();
             string sql = @"INSERT IGNORE INTO tb.import_data
@@ -18,12 +18,12 @@ namespace FileImport.Repositories
 
             //connection.Open();
 
-            foreach (var supply in supplyDto)
+            foreach (var supplier in supplierData)
             {
-                command.Parameters.AddWithValue("placa_antiga", supply.PlacaAntiga);
-                command.Parameters.AddWithValue("cmt", supply.Cmt);
-                command.Parameters.AddWithValue("nr_passageiros", supply.NrPassageiros);
-                command.Parameters.AddWithValue("busca", supply.Busca);
+                command.Parameters.AddWithValue("placa_antiga", supplier.PlacaAntiga);
+                command.Parameters.AddWithValue("cmt", supplier.Cmt);
+                command.Parameters.AddWithValue("nr_passageiros", supplier.NrPassageiros);
+                command.Parameters.AddWithValue("busca", supplier.Busca);
                 //command.ExecuteNonQuery();
                 command.Parameters.Clear();
             }

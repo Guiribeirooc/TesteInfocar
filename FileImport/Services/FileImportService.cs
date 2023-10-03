@@ -18,7 +18,7 @@ namespace FileImport.Services
         {
             var excel = _fileService.ObterArquivoExcel(file);
             var dados = excel.Tables[0].Rows;
-            var suppliers = new List<SupplyDTO>();
+            var suppliers = new List<SupplierDataDTO>();
 
             for (int linha = 0; linha < dados.Count; linha++)
             {
@@ -27,7 +27,7 @@ namespace FileImport.Services
                 var nrPassageiros = dados[linha]["NR_PASSAGEIROS"].ToString()?.Trim();
                 var busca = dados[linha]["BUSCA"].ToString()?.Trim();
 
-                var supplyDto = new SupplyDTO()
+                var supplierData = new SupplierDataDTO()
                 {
                     PlacaAntiga = placa,
                     Cmt = cmt,
@@ -35,7 +35,7 @@ namespace FileImport.Services
                     Busca = busca
                 };
 
-                suppliers.Add(supplyDto);
+                suppliers.Add(supplierData);
             }
 
             _repository.ImportData(suppliers);

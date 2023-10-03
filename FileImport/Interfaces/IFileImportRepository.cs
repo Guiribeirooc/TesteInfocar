@@ -4,6 +4,6 @@ namespace FileImport.Interfaces
 {
     public interface IFileImportRepository
     {
-        void ImportData(List<SupplyDTO> supplyDto);
+        void ImportData(List<SupplierDataDTO> supplierData);
     }
 }

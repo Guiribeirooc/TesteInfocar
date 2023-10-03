@@ -1,6 +1,6 @@
 ﻿namespace FileImport.Models
 {
-    public class SupplyDTO
+    public class SupplierDataDTO
     {
         public string? PlacaAntiga { get; set; }
         public string? Cmt { get; set; }

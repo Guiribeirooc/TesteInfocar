@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34112.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{9C3840DB-5674-4239-A6E6-284E937A5B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileExport", "FileExport\FileExport.csproj", "{1A16034E-EA83-4CFD-95DE-95F49CF3A8C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteInfocar.FileExport", "FileExport\TesteInfocar.FileExport.csproj", "{1A16034E-EA83-4CFD-95DE-95F49CF3A8C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileImport", "FileImport\FileImport.csproj", "{B64F5314-440D-4C20-B968-865208E5201F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteInfocar.FileImport", "FileImport\TesteInfocar.FileImport.csproj", "{B64F5314-440D-4C20-B968-865208E5201F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
